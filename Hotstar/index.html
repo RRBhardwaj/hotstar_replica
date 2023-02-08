@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            color: white;
+            background-color: rgb(37, 37, 77);
+        }
+        #slider img{
+            width:100%;
+            height:350px;
+        }
+        #container{
+            margin:auto;
+            width:100%;
+            
+        }
+        #movies{
+            display:grid;
+            width:100%;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,400px);
+            gap:30px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #movies img{
+            width:350px;
+            height:300px;
+        }
+        #navbar{
+            height:80px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        #navbar img{
+            height:auto;
+            width: auto;
+        }
+        #navbar div a{
+            text-transform: uppercase;
+            color: white;
+            display: block;
+            font-size: 13px;
+            letter-spacing: 2.6px;
+            line-height: 20.8px;
+           margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"/></div>
+        <div><a href="search.html">Search</a></div>
+        <div><a href="register.html">Register</a></div>
+       <div><a href="signup.html">Signup</a></div>
+    </div>
+    
+    <div id="slider"></div>
+
+    <div>
+        <button onclick="sortLH()">Low to High</button>
+        <button onclick="sortHL()">High to Low</button>
+    </div>
+
+    <div id="container">
+        <img src="data:image/png;base64,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" alt=""/>
+    </div>
+</body>
+</html>
+
+<script src="index.js"></script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        *{
+            background-color: rgb(37, 37, 77);
+            color: white;
+        }
+        #navbar div a{
+            text-transform: uppercase;
+            color: white;
+            display: block;
+            font-size: 13px;
+            letter-spacing: 2.6px;
+            line-height: 20.8px;
+           margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        #navbar{
+            height:80px;
+            margin-top: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        #login-form{
+            width: 300px;
+        }
+        #login-form form{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"/></div>
+        <div><a href="index.html">Home</a></div>
+    </div>
+    <div id="login-form">
+        <h1>Login</h1>
+        <form>
+            <input type="text" id="login-username" placeholder="username" />
+            <input type="password" id="login-password" placeholder="password"/ >
+        </form>
+        <button onclick="Login()">Login</button>
+        <div id="token"></div>
+    </div>
+</body>
+</html>
+<script src="signup.js"></script>

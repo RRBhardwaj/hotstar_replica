@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            background-color: rgb(37, 37, 77);
+            color: white;
+        }
+        #slideshow img{
+            margin:10px;
+            padding:5px;
+            width:100vw;
+            height:70vh;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(auto,400px);
+            gap:30px
+        }
+        #container div{
+            text-align:center;
+            margin-top:20px;
+        }
+        #navbar{
+            height:80px;
+        }
+        #navbar div a{
+            text-transform: uppercase;
+            color: white;
+            display: block;
+            font-size: 13px;
+            letter-spacing: 2.6px;
+            line-height: 20.8px;
+           margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        #navbar{
+            height:80px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>HOTSTAR</h1>
+    <div id="navbar">
+        <div><img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"/></div>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="register.html">Register</a></div>
+        <div><a href="signup.html">Signup</a></div>
+    </div>
+    <div id="slideshow"> </div>
+
+    <div>
+        <input oninput="debounce(searchMovie,1000)" type="text" id="query" value=""/>
+        <!-- <button oninput="searchMovie()">Search Movie</button> -->
+    </div>
+
+    <div id="container"></div>
+</body>
+</html>
+
+
+<script src="search.js"></script>
